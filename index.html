@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown ToC Generator</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a class="logo" href="https://github.com/iibe/markdown-toc"
+        >Markdown ToC</a
+      >
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <button id="color-mode" class="nav-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm2.312-4.897c0 2.206 1.794 4 4 4s4-1.794 4-4-1.794-4-4-4-4 1.794-4 4zm10 0c0 3.314-2.686 6-6 6s-6-2.686-6-6 2.686-6 6-6 6 2.686 6 6z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/iibe/markdown-toc">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <section class="main-i">
+        <textarea name="markdown-i" id="markdown-i">
+# Foo
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+## Bar
+
+Nulla facilisi. Proin venenatis urna at justo tempus, laoreet rutrum nisi efficitur.
+
+Etiam iaculis lobortis nibh, et accumsan diam imperdiet vitae.
+
+### Baz qux
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam possimus ullam officiis doloribus fugiat tenetur exercitationem labore dolor in eveniet unde architecto recusandae aliquam consectetur, voluptas repudiandae quibusdam necessitatibus pariatur?
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nam.
+
+### const Foobar123 = () => { console.log("Hello world 123"); }
+
+Fusce at mollis justo. Suspendisse eleifend neque diam, et ullamcorper urna gravida vitae.
+
+### Barfoo
+
+Donec ultricies egestas augue non dignissim.
+        </textarea>
+      </section>
+
+      <section class="main-s">
+        <button id="convert">Convert</button>
+      </section>
+
+      <section class="main-o">
+        <textarea name="markdown-o" id="markdown-o">
+## Table of contents
+
+- [Foo](#foo)
+  - [Bar](#bar)
+    - [Baz qux](#baz-qux)
+    - [const Foobar123 = () => { console.log("Hello world 123"); }](#const-foobar123-----consoleloghello-world-123-)
+    - [Barfoo](#barfoo)
+        </textarea>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      This work is licensed under the
+      <a href="https://creativecommons.org/publicdomain/zero/1.0/deed/"
+        >CC0-1.0 License</a
+      >.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+  </body>
+</html>

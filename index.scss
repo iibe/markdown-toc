@@ -1,0 +1,95 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* DEFAULT */
+body {
+  font-family: "Inter", sans-serif;
+  @apply w-full h-screen max-h-screen;
+  @apply leading-none text-gray-900 dark:text-gray-50;
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+/* HEADER */
+.header {
+  @apply sticky top-0 left-0 right-0;
+  @apply px-4 py-8;
+  @apply flex justify-between items-center;
+  @apply bg-gray-50 dark:bg-gray-900;
+  @apply border-b border-gray-200 dark:border-gray-700;
+
+  .logo {
+    @apply cursor-pointer transition;
+    @apply text-xl font-bold no-underline;
+    @apply hover:text-yellow-500;
+  }
+
+  .nav {
+    &-menu {
+      @apply list-none;
+      @apply flex items-center gap-x-4;
+    }
+    &-link {
+      @apply cursor-pointer transition;
+      @apply fill-current no-underline outline-none;
+      @apply hover:text-yellow-500;
+    }
+  }
+}
+
+/* MAIN */
+.main {
+  height: calc(100vh - 8.2rem);
+  @apply p-4 grid gap-4 grid-rows-5;
+
+  &-i,
+  &-o {
+    @apply row-span-2;
+  }
+  &-s {
+    @apply row-span-1 order-1;
+  }
+
+  textarea {
+    @apply resize-none outline-none;
+    @apply w-full h-full p-4 rounded-md;
+    @apply font-mono text-xs text-gray-500 dark:text-gray-400;
+    @apply border border-gray-200 dark:border-gray-700;
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  button {
+    @apply transition outline-none;
+    @apply block w-full py-4 px-8 rounded-md;
+    @apply leading-none text-center  text-gray-900;
+    @apply bg-yellow-500 hover:bg-yellow-600;
+  }
+}
+
+@media screen(md) {
+  .main {
+    @apply grid-cols-12;
+    &-i,
+    &-o {
+      @apply col-span-5;
+      @apply row-span-5;
+    }
+    &-s {
+      @apply col-span-2 order-none;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  @apply sticky bottom-0 left-0 right-0;
+  @apply px-4 py-2;
+  @apply text-xs text-center text-gray-500 dark:text-gray-400;
+  @apply bg-gray-50 dark:bg-gray-900;
+  @apply border-t border-gray-200 dark:border-gray-700;
+
+  a {
+    @apply text-blue-500 dark:text-blue-400;
+  }
+}
